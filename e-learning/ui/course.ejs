@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+    </head>
+    <body>
+        <%- include("header") %>
+        <h3>Available courses</h3>
+
+        <input type="text" id="name">
+        <button onclick="addCourse()">Add</button>
+        <ul id="list">
+        </ul>
+        <script>
+            async function loadCourses(){
+                const res = await fetch("/api/courses");
+                const data = await res.json();
+            }
+        </script>
+    </body>
+</html>
