@@ -35,6 +35,14 @@ app.get("/contact",(req,res)=>{
         title: "contact"
     });
 });
+app.get("/practice",(req,res)=>{
+    res.render("practice",{
+        title:"pratice_page"
+    });
+});
+app.get("/", (req, res) => {
+    res.render("index", { title: "Code Editor" });
+});
 
 //Server Listen
 app.listen(port,()=>{

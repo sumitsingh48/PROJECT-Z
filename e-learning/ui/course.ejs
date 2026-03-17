@@ -5,16 +5,17 @@
     </head>
     <body>
         <%- include("header") %>
-        <h3>Available courses</h3>
+        <h2>Available Course</h2>
 
-        <input type="text" id="name">
-        <button onclick="addCourse()">Add</button>
-        <ul id="list">
+        <input type = "text" id="name" />
+        <button onclick="">Add</button>
+        <ul id = "list">
+
         </ul>
         <script>
-            async function loadCourses(){
-                const res = await fetch("/api/courses");
-                const data = await res.json();
+            async function loadCourse(){
+                const res = await fetch();
+                const data = res.json();
             }
         </script>
     </body>
